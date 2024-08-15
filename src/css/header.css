@@ -1,0 +1,132 @@
+.header {
+  padding-top: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  /* z-index: 10; */
+}
+
+.header-mob-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-wrap {
+  display: flex;
+  gap: 8px;
+}
+.header-menu-btn,
+.header-order-btn {
+  display: none;
+}
+
+.header-menu-wrap {
+  display: none;
+}
+
+.burger {
+  background-color: transparent;
+  border: none;
+}
+
+.menu-item {
+  letter-spacing: -0.02em;
+  /* text-decoration: underline; */
+  text-decoration-skip-ink: none;
+  transition: color linear;
+}
+
+.menu-item:hover {
+  color: #ed3b44;
+}
+
+/* TABLET */
+/* HEADER */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .header-container {
+    padding-right: 20px;
+  }
+
+  .header-mob-wrap {
+    display: unset;
+  }
+
+  .header-tab-wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .header-menu-btn {
+    display: block;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #fafafa;
+    border: none;
+    background-color: transparent;
+    margin-top: 16px;
+  }
+
+  .header-order-btn {
+    display: block;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    background-color: #ed3b44;
+    border-radius: 60px;
+    padding: 18px 24px;
+    max-width: 175px;
+    /* height: 55px; */
+    border: none;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70%;
+    left: 45%;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .menu-wrapper {
+    position: relative;
+  }
+}
+
+/* DESKTOP */
+/* HEADER */
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    left: 47.5%;
+  }
+}
