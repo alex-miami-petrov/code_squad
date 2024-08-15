@@ -33,7 +33,7 @@
 
 .menu-item {
   letter-spacing: -0.02em;
-  /* text-decoration: underline; */
+
   text-decoration-skip-ink: none;
   transition: color linear;
 }
