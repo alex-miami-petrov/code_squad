@@ -1,51 +1,65 @@
 <section class="section-projects">
+  <h2 class="container projects-title">Projects</h2>
   <div class="container container-projects">
-    <h2 class="projects-title">Projects</h2>
     <div class="projects-content">
       <ul class="proj-list">
-        <li>
-          <p>#react</p>
+        <li class="li-proj">
+          <p class="p-proj">#react</p>
         </li>
-        <li>
-          <p>#js</p>
+        <li class="li-proj">
+          <p class="p-proj">#js</p>
         </li>
-        <li>
-          <p>#node js</p>
+        <li class="li-proj">
+          <p class="p-proj">#node js</p>
         </li>
-        <li>
-          <p>#git</p>
+        <li class="li-proj">
+          <p class="p-proj">#git</p>
         </li>
       </ul>
       <h1 class="title-proj-1">Programming Across Borders: Ideas, Technologies, Innovations</h1>
-      <button>See project</button>
+      <button type="button" class="btn-proj">See project</button>
     </div>
     <div class="projects-images">
+       <!-- Slider -->
       <div class="swiper img-slider">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide">
 <div class="image-slider">
-  <img src="../img/mob-exp-x1.jpg" class="img-proj" alt="exp">
+<picture class="img-proj">
+  <source srcset="../img/desc-tab-exp-x1.jpg 1x, ../img/desc-tab-exp-x2.jpg 2x" media="(min-width: 768px)" />
+  <source srcset="../img/mob-exp-x1.jpg 1x, ../img/mob-exp-x2.jpg 2x" media="(max-width: 767px)" />
+  <img class="img-sl-src" src="../img/desc-tab-exp-x1.jpg" alt="exp" width="614" height="385" loading="lazy">
+</picture>
 </div>
     </div>
     <div class="swiper-slide">
-<img src="../img/mob-pet-x1.jpg" class="img-proj" alt="pet">
+<picture class="img-proj">
+  <source srcset="../img/desc-tab-pet-x1.jpg 1x, ../img/desc-tab-pet-x2.jpg 2x" media="(min-width: 768px)" />
+  <source srcset="../img/mob-pet-x1.jpg 1x, ../img/mob-pet-x2.jpg 2x" media="(max-width: 767px)" />
+  <img class="img-sl-src" src="../img/desc-tab-pet-x1.jpg" alt="exp" width="614" height="385" loading="lazy">
+</picture>
     </div>
     <div class="swiper-slide">
-<img src="../img/mob-reg-x1.jpg" class="img-proj" alt="reg">
+<picture class="img-proj">
+  <source srcset="../img/desc-tab-reg-x1.jpg 1x, ../img/desc-tab-reg-x2.jpg 2x" media="(min-width: 768px)" />
+  <source srcset="../img/mob-reg-x1.jpg 1x, ../img/mob-reg-x2.jpg 2x" media="(max-width: 767px)" />
+  <img class="img-sl-src" src="../img/desc-tab-reg-x1.jpg" alt="exp" width="614" height="385" loading="lazy">
+</picture>
     </div>
-     <div class="swiper-button-prev">
+  </div>
+ <div class="swiper-button-prev btn-proj-arr-l">
       <svg class="arrov-l-proj" width="52" height="52">
         <use href="../img/icons.svg#icon-l-arr"></use>
       </svg>
      </div>
-     <div class="swiper-button-next">
+     <div class="swiper-button-next btn-proj-arr-r">
        <svg class="arrov-r-proj" width="52" height="52">
         <use href="../img/icons.svg#icon-r-arr"></use>
       </svg>
      </div>
-  </div>
+
     </div>
   </div>
   <script type="module" src="../js/projects.js"></script>
