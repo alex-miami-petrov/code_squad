@@ -1,3 +1,16 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .work-together {
   width: 100%;
   padding-top: 32px;
@@ -126,6 +139,11 @@
   background-color: #ed3b44;
 }
 
+.work-together-btn:hover,
+.work-together-btn:focus {
+  background-color: #e0373f;
+}
+
 .work-together-list {
   display: inline-flex;
   align-items: flex-start;
@@ -140,25 +158,76 @@
   gap: 10px;
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.2);
-  font-family: 'Inter Tight';
   font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  background: rgba(15, 15, 16, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: absolute;
+  border-radius: 20px;
+  border: 1px rgba(250, 250, 250, 0.1);
+  background: var(--Background, #1c1d20);
+  margin: 0 16px;
+}
+
+.modal-content {
+  padding: 64px 32px;
+}
+
+.close-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 22px;
+  height: 22px;
+  background: var(--Background, #1c1d20);
+  border: 1px rgba(250, 250, 250, 0.1);
+}
+
+.close-icon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+}
+
+.success-title {
+  align-self: stretch;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.success-text {
+  color: rgba(250, 250, 250, 0.6);
+  text-align: center;
+  align-self: stretch;
+  line-height: 24px;
+  letter-spacing: -0.32px;
 }
 
 @media screen and (min-width: 768px) {
   .work-together {
     padding-top: 85px;
     padding-bottom: 169px;
-    background-image: url(/img/work-together-bg/work-together-bg-tab.png);
+    background-image: url(../img/work-together-bg/work-together-bg-tab.png);
     background-position: right -170px bottom -43px;
   }
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .work-together {
-      background-image: url(/img/work-together-bg/work-together-bg-2x-tab.png);
+      background-image: url(../img/work-together-bg/work-together-bg-2x-tab.png);
     }
   }
 
@@ -221,19 +290,42 @@
     line-height: normal;
     letter-spacing: -0.32px;
   }
+
+  .modal-content {
+    width: 364px;
+    padding: 64px;
+  }
+
+  .close-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .success-title {
+    align-self: stretch;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .success-text {
+    color: rgba(250, 250, 250, 0.6);
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .work-together {
     padding-top: 85px;
     padding-bottom: 169px;
-    background-image: url(/img/work-together-bg/work-together-bg-desk.png);
+    background-image: url(../img/work-together-bg/work-together-bg-desk.png);
     background-position: right -360px bottom -43px;
   }
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .work-together {
-      background-image: url(/img/work-together-bg/work-together-bg-2x-desk.png);
+      background-image: url(../img/work-together-bg/work-together-bg-2x-desk.png);
     }
   }
 
