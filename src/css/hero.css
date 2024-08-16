@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 32px;
+  margin-bottom: 96px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192ppi) {
+  .hero {
+      url(../img/hero-bg-2x.jpg);
+  }
+}
+
+.hero-title {
+  padding-top: 281px;
+  margin-bottom: 162px;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  max-width: 343px;
+}
+.hero-soc-list {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+/* .soc-link-email {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 152px;
+  
+  padding: 10px 12px;
+  display: block;
+  transition: border linear;
+}
+
+.soc-link-email:hover {
+  border: 1px solid #fafafa;
+} */
+
+.soc-link-email {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 152px;
+  padding: 10px 12px;
+  display: block;
+  transition: border linear;
+  text-decoration: none;
+}
+
+.soc-link-email:hover,
+.soc-link-email:focus {
+  border: 1px solid #fafafa;
+}
+
+.soc-link-email:focus {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.soc-link-email:focus {
+  outline: none;
+}
+
+.soc-link {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  /* padding: 12px 12px; */
+  width: 40px;
+  height: 37px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TABLET */
+/* HERO */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+  }
+
+  .hero-container {
+    padding-right: 16px;
+  }
+
+  .hero-title {
+    font-size: 90px;
+    padding-top: 281px;
+    margin-bottom: 97px;
+  }
+
+  .hero-soc-list {
+    justify-content: flex-end;
+    top: 360px;
+    gap: 8px;
+  }
+
+  .soc-link {
+    width: 55px;
+    height: 55px;
+  }
+  .soc-link-email {
+    font-size: 16px;
+    width: 249px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* DESKTOP */
+/* HERO */
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    max-width: 1084px;
+    padding-top: 300px;
+    /* margin-bottom: 153px; */
+    margin: 0 auto;
+  }
+  .hero-soc-list {
+    margin-top: 153px;
+  }
+}
