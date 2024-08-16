@@ -1,4 +1,4 @@
-.hero {
+/* .hero {
   position: relative;
   background-image: url(../img/hero-bg.jpg);
   background-size: cover;
@@ -12,6 +12,24 @@
   (min-resolution: 192ppi) {
   .hero {
       url(../img/hero-bg-2x.jpg);
+  }
+} */
+
+.hero {
+  position: relative;
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 32px;
+  margin-bottom: 96px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(../img/hero-bg-2x.jpg);
   }
 }
 
