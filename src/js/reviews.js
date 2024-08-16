@@ -1,4 +1,4 @@
-import { createSwiperReviews } from './createSwiper.js';
+import { createSwiperReviews } from './createSwipers.js';
 
 export function toggleReviews() {
   let revElem = document.getElementById('rev');
