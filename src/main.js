@@ -5,3 +5,5 @@ openMenu();
 
 //  section Reviews
 toggleReviews();
+
+ import './js/about';
