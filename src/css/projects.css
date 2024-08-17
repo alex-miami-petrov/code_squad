@@ -154,3 +154,22 @@ max-width: 100%;
 .swiper-button-next.btn-proj-arr-r::after {
     content: none;
 } */
+
+.swiper-button-next.btn-proj-arr-r::after,
+.swiper-container-rtl .swiper-button-prev.btn-proj-arr-l:after {
+    content: '';
+}
+
+.swiper-button-prev.btn-proj-arr-l::after,
+.swiper-container-rtl .swiper-button-prev.btn-proj-arr-l:after {
+    content: '';
+}
+
+:root {
+--swiper-navigation-size: inherit !important;
+}
+
+.arrov-l-proj,
+.arrov-r-proj {
+    stroke:#FAFAFA
+}
