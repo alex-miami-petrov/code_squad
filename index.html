@@ -15,7 +15,7 @@
     <script type="module" crossorigin src="/code_squad/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/code_squad/assets/vendor-BmX6QGY8.js">
     <link rel="stylesheet" crossorigin href="/code_squad/assets/vendor-CWhC9Oe7.css">
-    <link rel="stylesheet" crossorigin href="/code_squad/assets/index-bldkh8J_.css">
+    <link rel="stylesheet" crossorigin href="/code_squad/assets/index-B7f9vO7B.css">
   </head>
   <body>
     <main>
@@ -501,19 +501,28 @@
             pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
             name="email"
             class="work-together-input"
+            id="work-together-input-email"
             placeholder="clients@gmail.com"
-            autocomplete="email"
+            autocomplete="off"
             required
           />
-          <div class="line"></div>
+          <div class="line-succes-error">
+            <div class="line"></div>
+            <p class="line-text-succes visually-hidden">Succes!</p>
+            <p class="line-text-error visually-hidden">
+              Invalid email, try again
+            </p>
+          </div>
         </div>
         <div class="input-wrap">
           <input
             type="text"
             name="comment"
             class="work-together-input"
+            id="work-together-input"
             placeholder="comment"
             autocomplete="off"
+            required
           />
           <div class="line"></div>
         </div>
