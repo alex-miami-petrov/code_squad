@@ -1,8 +1,12 @@
 import openMenu from './js/openMenu';
 import { toggleReviews } from './js/reviews';
-import './js/about';
-
+import { submitWorkTogether } from './js/workTogether';
 openMenu();
 
 //  section Reviews
 toggleReviews();
+
+// work-together
+submitWorkTogether();
+
+import './js/about';
