@@ -1,4 +1,4 @@
-import openMenu from './js/openMenu';
+import openMenu from './js/openMobMenu';
 import { toggleReviews } from './js/reviews';
 import { submitWorkTogether } from './js/workTogether';
 import './js/about';
