@@ -6,5 +6,9 @@ openMenu();
 //  section Reviews
 toggleReviews();
 
+
 // work-together
 submitWorkTogether();
+
+ import './js/about';
+
