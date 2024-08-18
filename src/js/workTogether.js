@@ -7,8 +7,11 @@ const STORAGE_KEY = 'work-together-form';
 export function submitWorkTogether() {
   const formEl = document.querySelector('#js-work-together-form');
   const backdropEl = document.querySelector('.backdrop');
-  const closeModalBtn = document.querySelector('#close-success'); // Кнопка для закриття модального вікна
-
+  const closeModalBtn = document.querySelector('#close-success');
+  const emailInputEl = document.querySelector('#work-together-input-email');
+  const successMessageEl = document.querySelector('.line-text-succes');
+  const errorMessageEl = document.querySelector('.line-text-error');
+  const lineEl = document.querySelector('.line');
   let savedFeedbackData = loadFormData();
 
   formEl.addEventListener('submit', onSubmit);
@@ -16,6 +19,7 @@ export function submitWorkTogether() {
   backdropEl.addEventListener('click', onBackdropClick);
   closeModalBtn.addEventListener('click', closeModal);
   window.addEventListener('keydown', onEscapePress);
+  emailInputEl.addEventListener('input', validateEmail);
 
   populateForm(savedFeedbackData);
 
@@ -23,6 +27,20 @@ export function submitWorkTogether() {
     const { name, value } = event.target;
     savedFeedbackData = { ...savedFeedbackData, [name]: value };
     saveFormData(savedFeedbackData);
+  }
+
+  function validateEmail() {
+    if (emailInputEl.checkValidity()) {
+      lineEl.classList.remove('error');
+      lineEl.classList.add('succes');
+      successMessageEl.classList.remove('visually-hidden');
+      errorMessageEl.classList.add('visually-hidden');
+    } else {
+      lineEl.classList.remove('succes');
+      lineEl.classList.add('error');
+      successMessageEl.classList.add('visually-hidden');
+      errorMessageEl.classList.remove('visually-hidden');
+    }
   }
 
   async function onSubmit(event) {
@@ -39,6 +57,8 @@ export function submitWorkTogether() {
     backdropEl.classList.remove('visually-hidden');
     formEl.reset();
     localStorage.removeItem(STORAGE_KEY);
+    lineEl.classList.remove('succes');
+    successMessageEl.classList.add('visually-hidden');
   }
 
   function handleError(error) {
