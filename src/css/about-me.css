@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
 /* {
     box-sizing: border-box;
 } */
-=======
-* {
-    box-sizing: border-box;
-}
->>>>>>> Stashed changes
 
 .section-about {
     margin: 64px 16px 64px 16px;
@@ -23,11 +17,7 @@
 }
 
 .section_text {
-<<<<<<< Updated upstream
    /* padding: 32px; */
-=======
-    padding: 32px;
->>>>>>> Stashed changes
     background-color: #242527;
     border-radius: 24px;
     margin-left: auto;
@@ -42,10 +32,7 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #fafafa;
-<<<<<<< Updated upstream
     padding: 32px 32px 272px 32px;
-=======
->>>>>>> Stashed changes
 }
 
 .section_title-functional {
@@ -238,10 +225,7 @@
 
     .section-title {
         line-height: 1.1;
-<<<<<<< Updated upstream
         padding: 64px 64px 436px 64px;
-=======
->>>>>>> Stashed changes
     }
 
     .section-box {
