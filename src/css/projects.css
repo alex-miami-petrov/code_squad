@@ -1,10 +1,11 @@
 .section-projects {
     height: 952px;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
     width: 375px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .container-projects {
     display: flex;
     flex-direction: column;
@@ -39,12 +40,14 @@ padding-bottom: 32px;
     width: 279px;
     height: 96px;
     padding: 32px 32px 96px 32px;
+    box-sizing: content-box !important;
 }
 .li-proj {
     border: 1px solid rgba(28, 29, 32, 0.2);
     border-radius: 60px;
     padding: 13px 18px;
     list-style: none;
+    box-sizing: content-box !important;
 }
 .p-proj {
     font-family: "Inter Tight", sans-serif;
@@ -89,6 +92,7 @@ padding: 0 32px 32px 32px;
 width: 311px;
 height: 195px;
 padding: 100px 16px 100px 16px;
+box-sizing: content-box !important;
 }
 
 .img-slider {
@@ -102,8 +106,6 @@ padding: 100px 16px 100px 16px;
 .swiper-button-prev.btn-proj-arr-l,
 .swiper-button-next.btn-proj-arr-r {
     position: relative;
-    width: 52px;
-    height: 52px;
     display: block;
 }
 
@@ -113,6 +115,8 @@ padding: 100px 16px 100px 16px;
     gap: 40px;
     padding-top: 32px;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* .swiper-button-prev.btn-proj-arr-l::after,
@@ -136,7 +140,14 @@ padding: 100px 16px 100px 16px;
 
 .arrov-l-proj,
 .arrov-r-proj {
-    stroke: #FAFAFA
+    /* stroke: #FAFAFA; */
+    fill:#FAFAFA;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+        border-radius: 60px;
+        padding: 14px;
+        width: 52px !important;
+        height: 52px !important;
+
 }
 
 @media screen and (max-width: 320px) {
@@ -156,7 +167,7 @@ padding: 100px 16px 100px 16px;
 @media screen and (min-width: 768px) {
 .section-projects {
         height: 1379px;
-        padding-bottom: 96px;
+        margin-bottom: 96px;
         width: 768px;
     }
 
@@ -178,7 +189,7 @@ padding: 100px 16px 100px 16px;
  }
   .title-proj-1 {
     font-size: 44px;
-    width: 494px;
+    /* width: 494px; */
     padding: 0 146px 32px 64px;
   }
   .btn-proj {
@@ -196,15 +207,22 @@ padding: 100px 16px 100px 16px;
   .btns-swiper {
 padding-top: 64px;
   }
+ .arrov-l-proj,
+ .arrov-r-proj {
+        width: 68px !important;
+        height: 68px !important;
+        padding: 18px;
+}
 }
 
 @media screen and (min-width: 1440px) {
 .section-projects {
     height: 813px;
     width: 1440px;
-    padding-bottom: 164px;
+   margin-bottom: 164px;
 }
     .container-projects {
+        height: 625px;
     display: flex;
     flex-direction: row;
         }
