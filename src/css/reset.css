@@ -61,6 +61,27 @@ html {
   overflow: hidden;
 }
 
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Сховати кнопку за замовчуванням */
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-to-top-btn:hover {
+  background-color: #555;
+}
+
 @media screen and (min-width: 320px) and (max-width: 374px) {
   .container {
     width: 100%;
