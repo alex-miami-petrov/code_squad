@@ -13,8 +13,8 @@
     />
 
     <script type="module" crossorigin src="/code_squad/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/code_squad/assets/vendor-BmEiVcQD.js">
-    <link rel="stylesheet" crossorigin href="/code_squad/assets/vendor-HdWFjXwp.css">
+    <link rel="modulepreload" crossorigin href="/code_squad/assets/vendor-D7UCOcnn.js">
+    <link rel="stylesheet" crossorigin href="/code_squad/assets/vendor-CTkdz8MY.css">
     <link rel="stylesheet" crossorigin href="/code_squad/assets/index-Z4U9vcbV.css">
   </head>
   <body>
@@ -261,7 +261,7 @@
       </h2>
     </div>
     <p class="work-together-text">together</p>
-    <form class="work-together-form">
+    <form class="work-together-form" id="js-work-together-form">
       <div class="work-together-wrap">
         <div class="input-wrap">
           <input
@@ -270,6 +270,7 @@
             name="email"
             class="work-together-input"
             placeholder="clients@gmail.com"
+            autocomplete="email"
             required
           />
           <div class="line"></div>
@@ -277,9 +278,10 @@
         <div class="input-wrap">
           <input
             type="text"
-            name="comments"
+            name="comment"
             class="work-together-input"
-            placeholder="comments"
+            placeholder="comment"
+            autocomplete="off"
           />
           <div class="line"></div>
         </div>
