@@ -11,9 +11,6 @@ scrollToTopBtn();
 // header
 openMenu();
 
-// faq
-accordionFaq;
-
 //  section Reviews
 toggleReviews();
 
