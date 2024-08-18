@@ -16,5 +16,9 @@ openMenu();
 //  section Reviews
 toggleReviews();
 
+<<<<<<< Updated upstream
 // work-together
 submitWorkTogether();
+=======
+ import './js/about';
+>>>>>>> Stashed changes
