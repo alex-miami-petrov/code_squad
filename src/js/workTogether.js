@@ -2,80 +2,95 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import { addRequest } from './funcAPI';
 
+const STORAGE_KEY = 'work-together-form';
+
 export function submitWorkTogether() {
-  const STORAGE_KEY = 'work-together-form';
   const formEl = document.querySelector('#js-work-together-form');
   const backdropEl = document.querySelector('.backdrop');
-  const closeSuccess = document.querySelector('#close-success');
-  let savedFeedbackData = {};
+  const closeModalBtn = document.querySelector('#close-success'); // Кнопка для закриття модального вікна
 
-  formEl.addEventListener('submit', async function (event) {
+  let savedFeedbackData = loadFormData();
+
+  formEl.addEventListener('submit', onSubmit);
+  formEl.addEventListener('input', onInput);
+  backdropEl.addEventListener('click', onBackdropClick);
+  closeModalBtn.addEventListener('click', closeModal);
+  window.addEventListener('keydown', onEscapePress);
+
+  populateForm(savedFeedbackData);
+
+  function onInput(event) {
+    const { name, value } = event.target;
+    savedFeedbackData = { ...savedFeedbackData, [name]: value };
+    saveFormData(savedFeedbackData);
+  }
+
+  async function onSubmit(event) {
     event.preventDefault();
-
-    backdropEl.classList.add('visually-hidden');
     try {
       const response = await addRequest(savedFeedbackData);
-      console.log(savedFeedbackData);
-
-      if (response.ok) {
-        backdropEl.classList.remove('visually-hidden');
-        event.currentTarget.reset();
-        localStorage.removeItem(STORAGE_KEY);
-      } else {
-        throw new Error('Server responded with an error');
-      }
+      handleSuccess(response);
     } catch (error) {
-      backdropEl.classList.add('visually-hidden');
-      iziToast.error({
-        maxWidth: '370px',
-        position: 'topRight',
-        messageColor: 'white',
-        backgroundColor: 'red',
-        message: 'Sorry, there was an error connecting to the server!',
-      });
-      console.error(error);
+      handleError(error);
     }
-  });
+  }
 
-  formEl.addEventListener('input', function (event) {
-    const value = event.target.value;
-    const key = event.target.name;
+  function handleSuccess(response) {
+    backdropEl.classList.remove('visually-hidden');
+    formEl.reset();
+    localStorage.removeItem(STORAGE_KEY);
+  }
 
+  function handleError(error) {
+    iziToast.error({
+      maxWidth: '370px',
+      position: 'topRight',
+      messageColor: 'white',
+      backgroundColor: 'red',
+      message:
+        'Sorry, there was an error connecting to the server! Please correct your input and try again.',
+    });
+    console.error('Form submission error:', error.message);
+  }
+
+  function loadFormData() {
     try {
-      savedFeedbackData = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
     } catch (err) {
-      console.log(err);
-      return;
+      console.log('Error loading form data:', err);
+      return {};
     }
+  }
 
-    savedFeedbackData[key] = value;
-
+  function saveFormData(data) {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(savedFeedbackData));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
     } catch (err) {
-      console.log(err);
-      return;
+      console.log('Error saving form data:', err);
     }
-  });
+  }
 
-  function populateForm() {
-    try {
-      savedFeedbackData = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    } catch (err) {
-      console.log(err);
-      return;
-    }
-
-    if (!savedFeedbackData) {
-      return;
-    }
-
-    for (const key in savedFeedbackData) {
+  function populateForm(data) {
+    for (const [key, value] of Object.entries(data)) {
       if (formEl.elements[key]) {
-        formEl.elements[key].value = savedFeedbackData[key];
+        formEl.elements[key].value = value;
       }
     }
   }
 
-  populateForm();
+  function closeModal() {
+    backdropEl.classList.add('visually-hidden');
+  }
+
+  function onBackdropClick(event) {
+    if (event.target === backdropEl) {
+      closeModal();
+    }
+  }
+
+  function onEscapePress(event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+  }
 }
