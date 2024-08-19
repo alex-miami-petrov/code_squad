@@ -1,7 +1,7 @@
 import openMenu from './js/openMenu';
 import { toggleReviews } from './js/reviews';
 
-openMenu();
+// openMenu();
 
 //  section Reviews
 toggleReviews();
