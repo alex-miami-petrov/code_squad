@@ -1,0 +1,42 @@
+.rev-container {
+  display: flex;
+  flex-direction: column;
+}
+.rev-title {
+  font-family: 'Inter Tight', sans-serif;
+  width: 150px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+.rev-container .rev-title::before {
+  content: '▶ ';
+  font-size: 80%;
+  color: green;
+}
+.rev-container.open .rev-title::before {
+  content: '▼ ';
+}
+
+.rev-container .rev-list {
+  display: none;
+}
+.rev-container.open .rev-title::before {
+  content: '▼ ';
+}
+
+.rev-container.open .rev-list {
+  display: block;
+}
+
+.rev-li {
+  display: inline-block;
+}
+
+/* .swiper {
+  width: 344px;
+  height: 386px;
+} */
