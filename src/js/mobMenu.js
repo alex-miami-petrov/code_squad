@@ -15,7 +15,17 @@ export function openMobMenu() {
 
     navMobMenu.addEventListener('click', function (event) {
       if (event.target.tagName === 'A') {
-        mobMenu.classList.remove('active');
+        const targetId = event.target.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth',
+          });
+
+          mobMenu.classList.remove('active');
+        }
       }
     });
   });
