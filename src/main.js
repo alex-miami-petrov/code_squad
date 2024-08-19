@@ -2,6 +2,9 @@ import openMenu from './js/openMenu';
 import accordionFaq from './js/faq';
 import { toggleReviews } from './js/reviews';
 
+
+
+
 import initCoversAnimation from './js/covers';
 
 import { submitWorkTogether } from './js/workTogether';
@@ -15,6 +18,7 @@ scrollToTopBtn();
 
 // header
 openMenu();
+
 
 //  section Reviews
 toggleReviews();
