@@ -9,10 +9,7 @@ import './js/about';
 import { scrollToTopBtn } from './js/scrollToTopBtn.js';
 import 'modern-normalize/modern-normalize.css';
 
-
 scrollToTopBtn();
-
-
 
 // header
 openMenu();
@@ -20,15 +17,12 @@ openMenu();
 //  section Reviews
 toggleReviews();
 
-
-// section covers 
+// section covers
 document.addEventListener('DOMContentLoaded', () => {
-    initCoversAnimation();  // Викликаємо анімацію covers
+  initCoversAnimation(); // Викликаємо анімацію covers
 });
-=======
 
 // work-together
 submitWorkTogether();
 
- import './js/about';
-
+import './js/about';
