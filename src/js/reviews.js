@@ -9,21 +9,20 @@ export function toggleReviews() {
   titleElem.onclick = function () {
     revElem.classList.toggle('close');
   };
+  const revSection = document.querySelector('.rev-container');
+  const revUl = document.querySelector('.rev-list');
+  const revError = document.querySelector('.rev-error');
+  const revBtns = document.querySelectorAll('.rev-button');
 
   window.onload = () => {
-    let revSection = document.querySelector('.rev-container');
-
-    let observer = new IntersectionObserver(
+    const revObserver = new IntersectionObserver(
       () => {
-        const revUl = document.querySelector('.rev-list');
-        const revError = document.querySelector('.rev-error');
-
         getReviews()
           .then(data => {
             const marcup = createMarkupReviews(data);
             revUl.innerHTML = marcup;
-            const revSwiper = createSwiperReviews();
-            const revBtns = document.querySelectorAll('.rev-button');
+            createSwiperReviews();
+
             revBtns.forEach(btn => {
               btn.classList.remove('visually-hidden');
             });
@@ -36,12 +35,12 @@ export function toggleReviews() {
             // console.log('2');
           });
 
-        observer.unobserve(revSection);
+        revObserver.unobserve(revSection);
       },
 
       { threshold: 0.2 }
     );
 
-    observer.observe(revSection);
+    revObserver.observe(revSection);
   };
 }
