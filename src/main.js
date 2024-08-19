@@ -8,11 +8,17 @@ import 'modern-normalize/modern-normalize.css';
 
 scrollToTopBtn();
 
+
+
 // header
 openMenu();
 
 //  section Reviews
 toggleReviews();
 
+<<<<<<< Updated upstream
 // work-together
 submitWorkTogether();
+=======
+ import './js/about';
+>>>>>>> Stashed changes
