@@ -31,6 +31,10 @@
   border: none;
 }
 
+.menu {
+  display: none;
+}
+
 .menu-item {
   letter-spacing: -0.02em;
 
