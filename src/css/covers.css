@@ -27,7 +27,7 @@
 .covers-section {
   max-width: 375px;
   height: 508px;
-  padding-bottom: 164px;
+  /* padding-bottom: 164px; */
   margin: 0 auto;
 }
 
