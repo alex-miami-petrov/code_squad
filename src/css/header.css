@@ -22,6 +22,10 @@
   display: none;
 }
 
+.header-order-btn {
+  display: none;
+}
+
 .header-menu-wrap {
   display: none;
 }
@@ -44,6 +48,10 @@
 
 .menu-item:hover {
   color: #ed3b44;
+}
+
+.header-order-btn {
+  display: none;
 }
 
 /* TABLET */
