@@ -1,10 +1,7 @@
 import openMenu from './js/openMenu';
 import accordionFaq from './js/faq';
 import { toggleReviews } from './js/reviews';
-
-
-
-
+import { openMobMenu } from './js/mobMenu.js';
 import initCoversAnimation from './js/covers';
 
 import { submitWorkTogether } from './js/workTogether';
@@ -18,6 +15,9 @@ scrollToTopBtn();
 // header
 openMenu();
 
+// mob-menu
+
+openMobMenu();
 
 //  section Reviews
 toggleReviews();
