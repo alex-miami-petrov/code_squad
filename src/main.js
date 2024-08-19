@@ -6,7 +6,6 @@ import initCoversAnimation from './js/covers';
 
 import { submitWorkTogether } from './js/workTogether';
 import './js/about';
-import { accordionAbout } from './js/about.js';
 
 import { scrollToTopBtn } from './js/scrollToTopBtn.js';
 import 'modern-normalize/modern-normalize.css';
