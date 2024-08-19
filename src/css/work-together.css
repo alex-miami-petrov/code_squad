@@ -15,14 +15,14 @@
   width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  background-image: url(./img/work-together-bg/work-together-bg-mob.png);
+  background-image: url(/img/work-together-bg/work-together-bg-mob.png);
   background-repeat: no-repeat;
   background-position: right -70px bottom -127px;
 }
 
 @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
   .work-together {
-    background-image: url(./img/work-together-bg/work-together-bg-mob-2x.png);
+    background-image: url(/img/work-together-bg/work-together-bg-mob-2x.png);
   }
 }
 
@@ -254,13 +254,13 @@
   .work-together {
     padding-top: 85px;
     padding-bottom: 169px;
-    background-image: url(./img/work-together-bg/work-together-bg-tab.png);
+    background-image: url(/img/work-together-bg/work-together-bg-tab.png);
     background-position: right -170px bottom -43px;
   }
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .work-together {
-      background-image: url(./img/work-together-bg/work-together-bg-2x-tab.png);
+      background-image: url(/img/work-together-bg/work-together-bg-2x-tab.png);
     }
   }
 
@@ -356,13 +356,13 @@
   .work-together {
     padding-top: 85px;
     padding-bottom: 169px;
-    background-image: url(./img/work-together-bg/work-together-bg-desk.png);
+    background-image: url(/img/work-together-bg/work-together-bg-desk.png);
     background-position: right -360px bottom -43px;
   }
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .work-together {
-      background-image: url(./img/work-together-bg/work-together-bg-2x-desk.png);
+      background-image: url(/img/work-together-bg/work-together-bg-2x-desk.png);
     }
   }
 
