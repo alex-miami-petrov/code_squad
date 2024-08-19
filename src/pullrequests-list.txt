@@ -1,5 +1,9 @@
 https://github.com/alex-miami-petrov/code_squad/pull/8
 https://github.com/alex-miami-petrov/code_squad/pull/11
+<<<<<<< Updated upstream
 https://github.com/alex-miami-petrov/code_squad.git
 https://github.com/alex-miami-petrov/code_squad/pull/12
 https://github.com/alex-miami-petrov/code_squad/pull/20
+=======
+https://github.com/alex-miami-petrov/code_squad/pull/26
+>>>>>>> Stashed changes

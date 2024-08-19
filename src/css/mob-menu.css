@@ -1,4 +1,4 @@
-.nav-menu {
+.nav-mob-menu {
     position: fixed;
     top: 0;
     left: 100%;
@@ -13,44 +13,42 @@
     z-index: 999;
 }
 
-.nav-menu ul {
+.nav-mob-menu ul {
     list-style: none;
     padding: 0;
 }
 
-.nav-menu li {
+.nav-mob-menu li {
     margin: 20px 0;
 }
 
-.nav-menu li a {
+.nav-mob-menu li a {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.nav-menu li a:hover {
+.nav-mob-menu li a:hover {
     color: #f0a500;
 }
 
 
-.nav-menu.active {
+.nav-mob-menu.active {
     left: 0;
 }
 
 
-.menu.active .icon {
+.mob-menu.active .icon {
     background-color: transparent;
 }
 
-.menu.active .icon::before {
+.mob-menu.active .icon::before {
     transform: rotate(45deg);
     top: 0;
 }
 
-.menu.active .icon::after {
+.mob-menu.active .icon::after {
     transform: rotate(-45deg);
     bottom: 0;
 }
-
-*/
