@@ -7,3 +7,5 @@ https://github.com/alex-miami-petrov/code_squad/pull/20
 =======
 https://github.com/alex-miami-petrov/code_squad/pull/26
 >>>>>>> Stashed changes
+https://github.com/alex-miami-petrov/code_squad/pull/29
+
