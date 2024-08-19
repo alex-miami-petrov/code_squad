@@ -109,7 +109,7 @@
   /* height: 55px; */
   border: none;
   margin: 0 auto;
-  pointer-events: unset;
+  pointer-events: auto;
 }
 
 /* .mob-menu .nav-mob-menu a {
