@@ -8,7 +8,7 @@ export const accordionAbout = new Accord('.accord-container', {
   openOnInit: [0],
 });
 
-new Swiper('.slider', {
+export const swiperAbout = new Swiper('.slider', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.button-next',
