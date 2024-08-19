@@ -4,6 +4,9 @@
   padding-bottom: 64px;
   min-width: 0;
 }
+#reviews {
+  padding-top: 164px;
+}
 .rev-title {
   width: 150px;
   font-weight: 600;
@@ -121,10 +124,8 @@
   }
 }
 
-
 @media screen and (min-width: 1440px) {
   .rev-container {
     padding-bottom: 164px;
   }
 }
-
