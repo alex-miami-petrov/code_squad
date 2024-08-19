@@ -109,6 +109,7 @@
   /* height: 55px; */
   border: none;
   margin: 0 auto;
+  pointer-events: unset;
 }
 
 /* .mob-menu .nav-mob-menu a {
