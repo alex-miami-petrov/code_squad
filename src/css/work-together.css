@@ -362,7 +362,7 @@
 
   @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .work-together {
-      background-image: url(./img/work-together-bg/work-together-bg-2x-desk.png);
+      background-image: url(/src/work-together-bg-2x-desk.png);
     }
   }
 
