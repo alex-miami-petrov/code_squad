@@ -57,14 +57,41 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 96px;
+    margin-bottom: 32px;
+    margin-top: 16px;
 }
 
 .accord {
-    background-color: #1c1d20;
+    background-color: #1c1d20 !important;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
+.ac.is-active>.ac-header .ac-trigger::after,
+.ac .ac-trigger::after {
+    content: "" !important;
+}
+.icon-down, 
+.icon-up {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+    padding: 9px;
+    width: 36px;
+    height: 36px;
+}
+.ac-about-h-btn {
+    display: flex;
+}
+.ac .ac-trigger {
+    display: flex !important;
+justify-content: flex-end;
+padding: 0 !important;
+}
+
+.ac {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
 .accord-header {
     font-family: 'Inter Tight', sans-serif;
     font-weight: 600;
@@ -74,6 +101,7 @@
     text-transform: uppercase;
     color: rgba(250, 250, 250, 0.4);
     margin-bottom: 8px;
+    width: 284px;
 }
 
 .accord-btn {
@@ -133,7 +161,7 @@
 }
 
 .ac.ac.is-active .icon-down {
-    display: block;
+    display: flex;
 }
 
 .ac.ac.is-active .icon-up {
@@ -236,6 +264,7 @@
 
     .accord-container {
         width: 704px;
+        margin-top: 32px;
     }
 
     .accord-first,
@@ -288,6 +317,12 @@
         letter-spacing: -0.02em;
         color: #fafafa;
     }
+        .icon-down,
+        .icon-up {
+                padding: 10px;
+                width: 40px;
+                height: 40px;
+        }
 }
 
 @media screen and (min-width: 1376px) {
@@ -299,7 +334,9 @@
     }
 
     .accord-container {
-        width: 1376px;
+        width: 100%;
+        margin-top: 64px;
+        margin-bottom: 64px;
     }
 
     .accord-first,
