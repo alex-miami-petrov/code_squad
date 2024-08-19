@@ -7,6 +7,6 @@ export async function getReviews() {
   return data;
 }
 
-export async function addRequest(request) {
-  return (await axios.post('requests', request)).data;
+export async function addRequest(body) {
+  return (await axios.post('requests', body)).data;
 }
