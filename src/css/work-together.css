@@ -20,11 +20,17 @@
   background-position: right -70px bottom -127px;
 }
 
-@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
-  .work-together {
-    background-image: url(/img/work-together-bg/work-together-bg-mob-2x.png);
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-resolution: 192dpi) {
+    .work-together {
+      background-image: url(/img/work-together-bg/work-together-bg-mob-2x.png));
+    }
   }
-}
+
+
 
 .work-together-title-img {
   display: flex;
@@ -258,11 +264,7 @@
     background-position: right -170px bottom -43px;
   }
 
-  /* @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
-    .work-together {
-      background-image: url(/img/work-together-bg/work-together-bg-2x-tab.png);
-    }
-  } */
+
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
     only screen and (min--moz-device-pixel-ratio: 2),
@@ -369,11 +371,17 @@
     background-position: right -360px bottom -43px;
   }
 
-  @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-resolution: 192dpi) {
     .work-together {
       background-image: url(/img/work-together-bg-2x-desk.png);
     }
   }
+
 
   .work-together-container {
     padding: 0 196px;
