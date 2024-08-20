@@ -9,6 +9,14 @@
   margin: 0 auto;
 }
 
+.benefits {
+  padding-bottom: 116px;
+}
+
+.icon {
+  fill: #012fa2;
+}
+
 .container-title {
   color: rgba(250, 250, 250, 0.4);
   font-size: 16px;

@@ -4,11 +4,11 @@ import 'swiper/css';
 
 import { Keyboard, Mousewheel, Navigation } from 'swiper/modules';
 
-new Accord('.accord-container', {
+export const accordionAbout = new Accord('.accord-container', {
   openOnInit: [0],
 });
 
-new Swiper('.slider', {
+export const swiperAbout = new Swiper('.slider', {
   modules: [Navigation, Keyboard, Mousewheel],
   navigation: {
     nextEl: '.button-next',

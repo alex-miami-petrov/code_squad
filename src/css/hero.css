@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background-image: url(../img/hero.jpg);
+  background-image: url(/img/hero.jpg);
   background-size: cover;
   background-position: center;
   padding-bottom: 32px;
@@ -13,7 +13,7 @@
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-resolution: 192dpi) {
   .hero {
-    background-image: url(../img/hero-2x.jpg);
+    background-image: url(/img/hero-2x.jpg);
   }
 }
 
@@ -101,7 +101,7 @@
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-resolution: 192dpi) {
     .hero {
-      background-image: url(../img/hero-2x.jpg);
+      background-image: url(/img/hero-2x.jpg);
     }
   }
 
@@ -151,7 +151,7 @@
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-resolution: 192dpi) {
     .hero {
-      background-image: url(../img/hero-2x.jpg);
+      background-image: url(/img/hero-2x.jpg);
     }
   }
 

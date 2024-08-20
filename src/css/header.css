@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   background-color: transparent;
-  /* z-index: 10; */
+  z-index: 1000;
 }
 
 .header-mob-wrap {
@@ -17,7 +17,12 @@
   display: flex;
   gap: 8px;
 }
+
 .header-menu-btn,
+.header-order-btn {
+  display: none;
+}
+
 .header-order-btn {
   display: none;
 }
@@ -31,6 +36,10 @@
   border: none;
 }
 
+.menu {
+  display: none;
+}
+
 .menu-item {
   letter-spacing: -0.02em;
 
@@ -38,8 +47,8 @@
   transition: color linear;
 }
 
-.menu-item:hover {
-  color: #ed3b44;
+.header-order-btn {
+  display: none;
 }
 
 /* TABLET */
@@ -89,7 +98,7 @@
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
-    background-color: #ed3b44;
+    background-color: #012fa2;
     border-radius: 60px;
     padding: 18px 24px;
     max-width: 175px;
@@ -110,6 +119,11 @@
     align-items: center;
     gap: 4px;
   }
+
+  .menu-item:hover {
+    color: #012fa2;
+  }
+
   .menu-wrapper {
     position: relative;
   }

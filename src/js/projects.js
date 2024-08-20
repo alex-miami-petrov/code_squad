@@ -1,12 +1,15 @@
 import Swiper from 'swiper/bundle';
-
 import 'swiper/css/bundle';
 
-new Swiper('.img-slider', {
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  mousewheel: true,
-  keyboard: true,
-});
+export function projectSwiper() {
+  new Swiper('.img-slider', {
+    speed: 500,
+    effect: 'cube',
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    mousewheel: false,
+    keyboard: true,
+  });
+}
