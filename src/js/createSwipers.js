@@ -5,9 +5,22 @@ import 'swiper/css/navigation';
 
 // swiper from section REVIEWS
 export function createSwiperReviews() {
-  return new Swiper('.rev-swiper', {
+  const revSwiper = new Swiper('.rev-swiper', {
     modules: [Navigation, Keyboard, Mousewheel],
-
+    on: {
+      init: function () {
+        const disBtn = document.querySelector('.swiper-button-disabled');
+        disBtn.classList.add('rev-button-disabled');
+      },
+      toEdge: function (swiper) {
+        const disBtn = document.querySelector('.swiper-button-disabled');
+        disBtn.classList.add('rev-button-disabled');
+      },
+      fromEdge: function (swiper) {
+        const disBtn = document.querySelector('.rev-button-disabled');
+        disBtn.classList.remove('rev-button-disabled');
+      },
+    },
     navigation: {
       nextEl: '.rev-next',
       prevEl: '.rev-prev',
@@ -33,30 +46,19 @@ export function createSwiperReviews() {
         spaceBetween: 16,
       },
     },
-    on: {
-      toEdge: function () {},
-    },
-    on: {
-      reachEnd: function () {
-        let btnNx = this.nextEl;
-        // btnNx.classList.add('rev-next-disabled');
-        // btnNx.disabled = true;
-        console.log(btnNx);
-      },
-    },
-    on: {
-      fromEdge: function () {
-        let btnPr = this.prevEl;
-        let btnNx = this.nextEl;
-        console.log(this.realIndex);
-        // btnPr.disabled = false;
-        // btnNx.disabled = false;
-        // btnPr.classList.remove('rev-per-disabled');
-        // btnNx.classList.remove('rev-next-enabled');
-      },
-    },
   });
 
-  // swiper.clickedIndex = 5;
-  // swiper.realIndex; Індексний номер поточного активного слайда
+  // revSwiper.on('slideChange', function (activeIndex) {
+  //   console.log(activeIndex);
+  // });
+
+  // revSwiper.on('slideNextTransitionEnd'),
+  //   function (swiper) {
+  //     console.log('CurrentActive:', swiper.activeIndex);
+  //   };
+
+  // on: {
+  //       slideNextTransitionEnd: function (swiper) {
+  //         console.log('CurrentActive:', swiper.activeIndex)
+  //       }
 }
