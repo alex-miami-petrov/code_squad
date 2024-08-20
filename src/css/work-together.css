@@ -47,6 +47,11 @@
   flex-shrink: 0;
 }
 
+.t-span {
+  position: absolute;
+  transform: translate(-138%, 108%);
+}
+
 .work-together-title {
   color: #fafafa;
   font-size: 40px;
@@ -58,7 +63,7 @@
 }
 
 .work-together-span {
-  color: #ed3b44;
+  color: #012fa2;
   font-size: 40px;
   font-style: normal;
   font-weight: 500;
@@ -72,6 +77,7 @@
   flex-direction: column;
   gap: 32px;
   margin-bottom: 64px;
+  margin-top: 80px;
 }
 
 .work-together-wrap {
