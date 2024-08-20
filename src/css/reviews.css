@@ -4,6 +4,9 @@
   padding-bottom: 64px;
   min-width: 0;
 }
+#reviews {
+  margin-top: 164px;
+}
 .rev-title {
   width: 150px;
   font-weight: 600;
