@@ -148,6 +148,10 @@
   color: #fafafa;
 }
 
+.mob-menu-item:hover {
+  color: #012fa2;
+}
+
 .header-menu-btn,
 .burger {
   cursor: pointer;
