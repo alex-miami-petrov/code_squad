@@ -5,6 +5,7 @@
   left: 0;
   width: 100%;
   background-color: transparent;
+  z-index: 1000;
 }
 
 .header-mob-wrap {
@@ -16,6 +17,7 @@
   display: flex;
   gap: 8px;
 }
+
 .header-menu-btn,
 .header-order-btn {
   display: none;
