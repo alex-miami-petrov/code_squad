@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api1';
+axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
 export async function getReviews() {
   const { data } = await axios.get('reviews');
