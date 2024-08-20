@@ -59,6 +59,7 @@ export function submitWorkTogether() {
     localStorage.removeItem(STORAGE_KEY);
     lineEl.classList.remove('succes');
     successMessageEl.classList.add('visually-hidden');
+    document.body.classList.add('modal-open');
   }
 
   function handleError(error) {
@@ -100,6 +101,7 @@ export function submitWorkTogether() {
 
   function closeModal() {
     backdropEl.classList.add('visually-hidden');
+    document.body.classList.remove('modal-open');
   }
 
   function onBackdropClick(event) {
