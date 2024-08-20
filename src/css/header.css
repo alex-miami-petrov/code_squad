@@ -47,10 +47,6 @@
   transition: color linear;
 }
 
-.menu-item:hover {
-  color: #012fa2;
-}
-
 .header-order-btn {
   display: none;
 }
@@ -123,6 +119,11 @@
     align-items: center;
     gap: 4px;
   }
+
+  .menu-item:hover {
+    color: #012fa2;
+  }
+
   .menu-wrapper {
     position: relative;
   }
