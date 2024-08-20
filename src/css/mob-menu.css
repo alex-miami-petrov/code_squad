@@ -49,12 +49,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../img/hero.jpg);
+  background-image: url(/img/hero.jpg);
   background-size: cover;
   background-position: center;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
-  z-index: 9999; /* ensure it's above other content */
+  z-index: 9999;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -62,7 +62,7 @@
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-resolution: 192dpi) {
   .mob-menu {
-    background-image: url(../img/hero-2x.jpg);
+    background-image: url(/img/hero-2x.jpg);
   }
 }
 
