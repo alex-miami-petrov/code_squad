@@ -6,16 +6,16 @@ import 'swiper/css/navigation';
 // swiper from section REVIEWS
 export function createSwiperReviews() {
   return new Swiper('.rev-swiper', {
-    modules: [Navigation, Keyboard, Mousewheel],
+    modules: [Navigation, Keyboard],
 
     navigation: {
       nextEl: '.rev-next',
       prevEl: '.rev-prev',
     },
     grabCursor: true,
-    mousewheel: {
-      invert: true,
-    },
+    // mousewheel: {
+    //   invert: true,
+    // },
     keyboard: {
       enabled: true,
       onlyInViewport: true,
