@@ -11,7 +11,7 @@ export function createMarkupReviews(arr) {
               width="344"
             /> 
             <h3 class="rev-author">${author}</h3>
-            <p class="rev-review">${review}</p>
+            <p id="elem" class="rev-review">${review}</p>
           </dir>
         </li>`
     )
