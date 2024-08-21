@@ -1,24 +1,26 @@
 import Swiper from 'swiper';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Keyboard, Mousewheel } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 // swiper from section REVIEWS
 export function createSwiperReviews() {
   const revSwiper = new Swiper('.rev-swiper', {
-    modules: [Navigation, Keyboard],
+    modules: [Navigation, Keyboard, Mousewheel],
     on: {
       init: function () {
         const disBtn = document.querySelector('.swiper-button-disabled');
-        disBtn.classList.add('rev-button-disabled');
+        disBtn.disabled = true;
       },
       toEdge: function (swiper) {
         const disBtn = document.querySelector('.swiper-button-disabled');
-        disBtn.classList.add('rev-button-disabled');
+        disBtn.disabled = true;
       },
       fromEdge: function (swiper) {
-        const disBtn = document.querySelector('.rev-button-disabled');
-        disBtn.classList.remove('rev-button-disabled');
+        const disBtnN = document.querySelector('.rev-next');
+        const disBtnP = document.querySelector('.rev-prev');
+        disBtnN.disabled = false;
+        disBtnP.disabled = false;
       },
     },
     navigation: {
@@ -26,16 +28,13 @@ export function createSwiperReviews() {
       prevEl: '.rev-prev',
     },
     grabCursor: true,
-    // mousewheel: {
-    //   invert: true,
-    // },
+    mousewheel: false,
     keyboard: {
       enabled: true,
       onlyInViewport: true,
       pageUpDown: true,
     },
     slidesPerView: 1,
-
     breakpoints: {
       768: {
         slidesPerView: 2,
