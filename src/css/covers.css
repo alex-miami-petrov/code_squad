@@ -31,14 +31,6 @@
   margin: 0 auto;
 }
 
-/* .covers {
-    max-width: 375px;
-    padding-top: 0;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    margin: 0 auto;
-}  */
 
 /* -------------------------------------------animation style for mobile---------------------- */
 
@@ -49,17 +41,12 @@
   position: absolute;
   /* смещение верх по левому краю */
   top: 0px;
-  /*      bottom:-700px; */
   overflow: hidden;
-  /*     position: relative; */
-  /*     overflow: hidden; */
   background-image: url(../img/covers/elements-mob-1x.png);
   background-size: cover;
   background-position: center;
   height: 508px;
   width: 375px;
-  /*     padding-bottom: 32px;
-    margin-bottom: 96px; */
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -116,18 +103,8 @@
   }
 
   .covers-image-container {
-    /*     position: absolute;
- */ /* смещение верх по левому краю */
-    /*     right: -1800px;
-    bottom:-2000px;
-    left: -1200px; */
     height: 960px;
     width: 768px;
-    /*   overflow: hidden; */
-    /*     font-family: "Pridi", sans-serif;
-    font-weight: 600;
-    font-size: 34px;
-    text-transform: uppercase; */
     background-image: url(../img/covers/elements-tab-1x.png);
   }
 
@@ -184,7 +161,6 @@
     top: 0px;
     bottom: -1000px;
     left: 0;
-    /*     overflow: hidden; */
     background-image: url(../img/covers/elements-pc-1x.png);
     height: 960px;
     width: 1440px;
