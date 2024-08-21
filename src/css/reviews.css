@@ -69,8 +69,35 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  overflow: hidden;
+  overflow: auto;
 }
+#elem::-webkit-scrollbar {
+  width: 8px;
+}
+
+#elem::-webkit-scrollbar-track {
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+}
+
+#elem::-webkit-scrollbar-thumb {
+  background-color: #356184;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
+
+/* #elem::-webkit-scrollbar-track {
+  width: 7px;
+  background-color: #f9f9fd;
+  -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #f9f9fd;
+} */
 .rev-buttons {
   display: flex;
   justify-content: center;
