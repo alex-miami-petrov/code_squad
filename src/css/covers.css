@@ -152,11 +152,11 @@
 
   .covers-image-container {
     position: absolute;
-    right: -400px; /* зміщення вгору по лівому краю */
+    right: -400px;
     top: 0px;
     bottom: -1000px;
     left: 0;
-    background-image: url(../img/covers/elements-pc-1x.png);
+    background-image: url(/img/covers/elements-pc-1x.png);
     height: 960px;
     width: 1440px;
   }
@@ -166,7 +166,7 @@
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-resolution: 192dpi) {
     .covers-image-container {
-      background-image: url(../img/covers/elements-pc-2x.png);
+      background-image: url(/img/covers/elements-pc-2x.png);
     }
   }
 
@@ -187,12 +187,10 @@
 
   @keyframes marqueeLine {
     from {
-      /* смещение картинок по оси верх */
       transform: translateX(-10%);
     }
 
     to {
-      /* смещение картинок по оси вниз */
       transform: translateX(-110%);
     }
   }
