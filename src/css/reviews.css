@@ -7,9 +7,7 @@
 .rev-section {
   padding-top: 64px;
 }
-.rev-section {
-  margin-top: 64px;
-}
+
 .rev-title {
   width: 150px;
   font-weight: 600;
@@ -182,4 +180,3 @@
     width: 332px;
   }
 }
-
