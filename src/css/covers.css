@@ -31,7 +31,6 @@
   margin: 0 auto;
 }
 
-
 /* -------------------------------------------animation style for mobile---------------------- */
 
 .covers-container {
@@ -39,10 +38,10 @@
 }
 .covers-image-container {
   position: absolute;
-  /* смещение верх по левому краю */
+
   top: 0px;
   overflow: hidden;
-  background-image: url(../img/covers/elements-mob-1x.png);
+  background-image: url(/img/covers/elements-mob-1x.png);
   background-size: cover;
   background-position: center;
   height: 508px;
@@ -54,7 +53,7 @@
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-resolution: 192dpi) {
   .covers-image-container {
-    background-image: url(../img/covers/elements-mob-2x.png);
+    background-image: url(/img/covers/elements-mob-2x.png);
   }
 }
 
@@ -65,9 +64,9 @@
 
 .covers-image {
   flex-shrink: 0;
-  /* пространство збоку между картинками */
+
   margin-right: 20px;
-  /* пространство внизцу между картинками */
+
   margin-bottom: 30px;
   display: flex;
   align-items: center;
@@ -83,12 +82,10 @@
 
 @keyframes marqueeLine {
   from {
-    /* смещение картинок по оси верх */
     transform: translateX(-10%);
   }
 
   to {
-    /* смещение картинок по оси вниз */
     transform: translateX(-180%);
   }
 }
@@ -105,7 +102,7 @@
   .covers-image-container {
     height: 960px;
     width: 768px;
-    background-image: url(../img/covers/elements-tab-1x.png);
+    background-image: url(/img/covers/elements-tab-1x.png);
   }
 
   @media only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -113,15 +110,15 @@
     only screen and (-o-min-device-pixel-ratio: 2/1),
     only screen and (min-resolution: 192dpi) {
     .covers-image-container {
-      background-image: url(../img/covers/elements-tab-2x.png);
+      background-image: url(/img/covers/elements-tab-2x.png);
     }
   }
 
   .covers-image {
     flex-shrink: 0;
-    /* пространство збоку между картинками */
+
     margin-right: 20px;
-    /* пространство внизцу между картинками */
+
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -136,12 +133,10 @@
 
   @keyframes marqueeLine {
     from {
-      /* смещение картинок по оси верх */
       transform: translateX(-10%);
     }
 
     to {
-      /* смещение картинок по оси вниз */
       transform: translateX(-110%);
     }
   }
@@ -177,8 +172,8 @@
 
   .covers-image {
     flex-shrink: 0;
-    margin-right: 20px; /* пространство збоку между картинками */
-    margin-bottom: 30px; /* пространство внизцу между картинками */
+    margin-right: 20px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
