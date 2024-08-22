@@ -62,6 +62,20 @@
   padding: 20px 0;
 }
 
+.faq-section button {
+  outline: none;
+}
+
+.faq-icon rect {
+  transition: stroke 0.3s ease;
+}
+
+.faq-icon:hover rect,
+button:focus .faq-icon rect {
+  stroke: #fafafa;
+  stroke-opacity: 0.7;
+}
+
 button#ac-trigger-0.btn-item.ac-trigger,
 button#ac-trigger-1.btn-item.ac-trigger,
 button#ac-trigger-2.btn-item.ac-trigger,
