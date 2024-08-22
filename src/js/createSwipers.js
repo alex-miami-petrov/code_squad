@@ -27,7 +27,7 @@ export function createSwiperReviews() {
       nextEl: '.rev-next',
       prevEl: '.rev-prev',
     },
-
+    cssMode: true,
     // grabCursor: true,
     mousewheel: false,
     keyboard: {
