@@ -114,6 +114,16 @@ button#ac-trigger-5.btn-item.ac-trigger {
   color: rgba(250, 250, 250, 0.6);
 }
 
+.accordion-container .accordion-item {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+
+.accordion-container .accordion-item.is-active {
+  max-height: 1000px;
+}
+
 @media screen and (min-width: 768px) {
   .faq-section {
     padding-bottom: 96px;
