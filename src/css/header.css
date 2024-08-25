@@ -91,6 +91,11 @@
     border: none;
     background-color: transparent;
     margin-top: 16px;
+    transition: color inline;
+  }
+
+  .header-menu-btn:hover {
+    color: #012fa2;
   }
 
   .header-order-btn {
