@@ -3,6 +3,10 @@
   max-width: 343px;
 }
 
+.faq-container {
+  width: 100%;
+}
+
 .faq-title {
   margin-bottom: 32px;
   font-family: 'Inter Tight', sans-serif;
@@ -35,13 +39,14 @@
 
 .faq-item.is-active .faq-item-text {
   padding-bottom: 20px;
+  height: 0;
 }
 
 .faq-item:not(:first-of-type) {
   margin-top: 0;
 }
 
-.faq-item-title {
+.faq-list .faq-item .faq-item-title {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -58,12 +63,13 @@
   padding: 20px 0;
 }
 
-.faq-list .faq-item .faq-item-title {
-  padding: 20px 0;
-}
-
-.faq-section button {
+.btn-item {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  background-color: #1c1d20;
   outline: none;
+  border: none;
 }
 
 .faq-icon rect {
@@ -76,27 +82,11 @@ button:focus .faq-icon rect {
   stroke-opacity: 0.7;
 }
 
-button#ac-trigger-0.btn-item.ac-trigger,
-button#ac-trigger-1.btn-item.ac-trigger,
-button#ac-trigger-2.btn-item.ac-trigger,
-button#ac-trigger-3.btn-item.ac-trigger,
-button#ac-trigger-4.btn-item.ac-trigger,
-button#ac-trigger-5.btn-item.ac-trigger {
-  width: 34px;
-  height: 34px;
-  padding: 0;
-}
-
 .is-active .faq-icon {
   transform: rotate(180deg);
 }
 
-.faq-section
-  .faq-container
-  .faq-list
-  .faq-item
-  .faq-item-title
-  .ac-trigger::after {
+.faq-section .faq-container .faq-list .faq-item .ac-trigger::after {
   content: none;
 }
 
@@ -112,16 +102,6 @@ button#ac-trigger-5.btn-item.ac-trigger {
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-}
-
-.accordion-container .accordion-item {
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
-}
-
-.accordion-container .accordion-item.is-active {
-  max-height: 1000px;
 }
 
 @media screen and (min-width: 768px) {
@@ -144,15 +124,9 @@ button#ac-trigger-5.btn-item.ac-trigger {
     padding-bottom: 24px;
   }
 
-  button#ac-trigger-0.btn-item.ac-trigger,
-  button#ac-trigger-1.btn-item.ac-trigger,
-  button#ac-trigger-2.btn-item.ac-trigger,
-  button#ac-trigger-3.btn-item.ac-trigger,
-  button#ac-trigger-4.btn-item.ac-trigger,
-  button#ac-trigger-5.btn-item.ac-trigger {
+  .btn-item {
     width: 40px;
     height: 40px;
-    padding: 0;
     margin-left: 42px;
   }
 
@@ -182,7 +156,6 @@ button#ac-trigger-5.btn-item.ac-trigger {
 
   .faq-item {
     width: auto;
-    border: none;
   }
 
   .faq-list .faq-item:nth-child(2n + 1) {
@@ -201,14 +174,7 @@ button#ac-trigger-5.btn-item.ac-trigger {
     gap: 0;
   }
 
-  .faq-list .faq-item {
-    border: none;
-  }
-
-  button#ac-trigger-0.btn-item.ac-trigger,
-  button#ac-trigger-2.btn-item.ac-trigger,
-  button#ac-trigger-4.btn-item.ac-trigger {
-    width: 40px;
+  .btn-item {
     margin-right: 32px;
   }
 
@@ -226,5 +192,17 @@ button#ac-trigger-5.btn-item.ac-trigger {
 
   .faq-list .faq-item-text {
     padding-right: 20px;
+  }
+
+  h3#ac-trigger-1.faq-item-title.ac-header.ac-trigger,
+  h3#ac-trigger-3.faq-item-title.ac-header.ac-trigger,
+  h3#ac-trigger-5.faq-item-title.ac-header.ac-trigger {
+    width: 680px;
+  }
+
+  .faq-item:nth-child(2) button.btn-item,
+  .faq-item:nth-child(4) .btn-item,
+  .faq-item:nth-child(6) .btn-item {
+    margin-right: 0;
   }
 }
