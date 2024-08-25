@@ -59,6 +59,12 @@
   width: 187px;
   height: 55px;
   margin-top: 32px;
+  transition: border linear;
+}
+
+.order-link:hover,
+.order-link:focus {
+  border: 1px solid #fafafa;
 }
 
 .container-item {

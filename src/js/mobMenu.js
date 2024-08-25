@@ -5,12 +5,22 @@ export function openMobMenu() {
     const closeMobMenu = document.querySelector('.close-mob-menu');
     const navMobMenu = document.querySelector('.nav-mob-menu');
 
+    function disableScroll() {
+      document.body.style.overflow = 'hidden';
+    }
+
+    function enableScroll() {
+      document.body.style.overflow = '';
+    }
+
     burger.addEventListener('click', function () {
       mobMenu.classList.add('active');
+      disableScroll();
     });
 
     closeMobMenu.addEventListener('click', function () {
       mobMenu.classList.remove('active');
+      enableScroll();
     });
 
     navMobMenu.addEventListener('click', function (event) {
